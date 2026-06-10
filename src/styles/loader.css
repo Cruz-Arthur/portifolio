@@ -1,0 +1,75 @@
+#loader {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-loader);
+  display: flex;
+  flex-direction: column;
+  background: var(--color-coal);
+  will-change: transform;
+}
+
+.loader-top,
+.loader-bot {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-coal);
+  will-change: transform;
+}
+
+.loader-top { align-items: flex-end; padding-bottom: var(--space-2); }
+.loader-bot { align-items: flex-start; padding-top: var(--space-2); }
+
+.loader-monogram {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.3em;
+  color: var(--color-warm-white);
+  display: flex;
+  overflow: hidden;
+}
+
+.loader-monogram .char {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* Ignition stage — sits above the splitting halves and exits with them */
+.loader-stage {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.loader-coord {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: rgba(250, 250, 248, 0.45);
+}
+
+.loader-char {
+  width: 34px;
+  margin-top: var(--space-4);
+}
+.loader-char .wk-head { fill: var(--color-warm-white); }
+.loader-char .wk-body,
+.loader-char .wk-limb { stroke: var(--color-warm-white); }
+
+.loader-horizon {
+  width: clamp(160px, 30vw, 320px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(196,149,106,0.6), transparent);
+  transform-origin: center;
+}
