@@ -17,7 +17,7 @@ import { prefersReducedMotion } from '../utils/helpers.js';
 
 const PLANETS = [
   { id: 'tech-innova', angle: 45,  orbitFrac: 0.22, period: 110, dir:  1, detailId: 'detail-tech-innova' },
-  { id: 'wip-1',       angle: 200, orbitFrac: 0.36, period: 158, dir: -1, detailId: null },
+  { id: 'iris',        angle: 200, orbitFrac: 0.36, period: 158, dir: -1, detailId: 'detail-iris' },
   { id: 'wip-2',       angle: 315, orbitFrac: 0.48, period: 205, dir:  1, detailId: null },
 ];
 

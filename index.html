@@ -260,15 +260,15 @@
           </div>
         </button>
 
-        <!-- Planet 02 — forming -->
-        <div class="solar-planet solar-planet--forming" data-planet="wip-1"
-             role="button" tabindex="0" aria-label="Projeto em desenvolvimento">
+        <!-- Planet 02 — Iris -->
+        <button class="solar-planet solar-planet--iris" data-planet="iris"
+                aria-label="Abrir projeto Iris" aria-haspopup="dialog">
           <div class="solar-planet-body"></div>
           <div class="solar-planet-label">
-            <span class="solar-planet-name">Em processo de hospedagem</span>
-            <span class="solar-planet-sub solar-signal">· SINAL FRACO ·</span>
+            <span class="solar-planet-name">Iris</span>
+            <span class="solar-planet-sub">Python · PyQt6 · ONNX</span>
           </div>
-        </div>
+        </button>
 
         <!-- Planet 03 — proto -->
         <div class="solar-planet solar-planet--proto" data-planet="wip-2"
@@ -284,6 +284,47 @@
       <!-- Toast for WIP click -->
       <div class="solar-toast" id="solar-toast" aria-live="polite" aria-atomic="true">
         Missão em campo · Aguarde transmissão
+      </div>
+
+      <!-- Detail overlay — Iris -->
+      <div class="project-detail" id="detail-iris"
+           role="dialog" aria-modal="true" aria-label="Iris — detalhes do projeto">
+        <button class="project-detail-close" aria-label="Fechar">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="project-detail-inner">
+          <div class="project-detail-planet" aria-hidden="true"></div>
+          <div class="project-detail-content">
+            <p class="project-detail-eyebrow"><span class="coord coord--light">EXPEDIÇÃO 02</span></p>
+            <h2 class="project-detail-title">Iris</h2>
+            <p class="project-detail-subtitle">Estação de Leitura Óptica</p>
+            <p class="project-detail-desc">
+              Aplicativo desktop para decodificação de QR codes em tempo real via webcam — com detecção
+              por IA (YOLO · ONNX Runtime), campo de estrelas interativo, diafragma de íris animado em
+              7 lâminas e pipeline de 60 FPS construído inteiramente em PyQt6 sem dependências web.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">PyQt6</span>
+              <span class="project-tag">OpenCV</span>
+              <span class="project-tag">ONNX Runtime</span>
+              <span class="project-tag">YOLO</span>
+            </div>
+            <div class="project-detail-links">
+              <a href="https://github.com/Cruz-Arthur/desk_Iris"
+                 class="project-detail-link project-detail-link--primary"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Ver Iris no GitHub (abre em nova aba)">
+                GitHub
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Detail overlay — Tech Innova -->
