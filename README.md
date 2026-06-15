@@ -1,4 +1,7 @@
-# Arthur Cruz · Portfólio
+# Arthur Cruz
+
+[**--> Explorar portifólio**](https://arthur-caue.vercel.app/)
+
 
 > *"Eu crio sistemas que respiram. Onde código e design se encontram para contar histórias que ficam."*
 
@@ -47,8 +50,8 @@ Efeito glass com SVG `feTurbulence` + `feDisplacementMap` animado, criando disto
 ## Rodando Localmente
 
 ```bash
-git clone https://github.com/Cruz-Arthur/Portifolio.git
-cd Portifolio
+git clone https://github.com/Cruz-Arthur/portifolio.git
+cd portifolio
 npm install
 npm run dev
 ```
