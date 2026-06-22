@@ -9,6 +9,8 @@ import { initHero } from './sections/hero.js';
 import { initAbout } from './sections/about.js';
 import { initSkills } from './sections/skills.js';
 import { initProjects } from './sections/projects.js';
+import { initIrisPlatform } from './components/iris-platform.js';
+import { initIrisBloom } from './components/iris-bloom.js';
 import { initContact } from './sections/contact.js';
 import { initNav } from './components/nav.js';
 import { initMagneticButtons } from './components/magnetic-button.js';
@@ -23,6 +25,8 @@ function initSections() {
   initAbout();
   initSkills();
   initProjects(rocket);
+  initIrisPlatform();
+  initIrisBloom();
   initContact();
   initNav();
   initMagneticButtons();

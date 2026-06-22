@@ -1310,6 +1310,98 @@ body {
   #detail-iris .project-detail-planet { animation: none; }
 }
 
+/* ── Iris platform switch — one optical station, two bodies (web · desktop) ──
+   Lives in the Iris amber sub-identity. A sliding thumb under two equal tabs;
+   the active tab reads in dark graphite over amber, inactive stays muted. */
+.iris-switch {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-bottom: var(--space-5);
+  padding: 3px;
+  border: 1px solid rgba(255, 180, 84, 0.30);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 180, 84, 0.06);
+
+  @media (max-width: 767px) { justify-self: center; }
+}
+
+.iris-switch-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: calc(50% - 3px);
+  height: calc(100% - 6px);
+  border-radius: var(--radius-pill);
+  background: #FFB454;
+  box-shadow: 0 0 18px rgba(255, 180, 84, 0.45);
+  transition: transform var(--dur-normal) var(--ease-spring);
+  will-change: transform;
+}
+
+.iris-switch-tab {
+  position: relative;
+  z-index: 1;
+  min-width: 86px;
+  padding: var(--space-2) var(--space-5);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-warm-white-dim);
+  transition: color var(--dur-normal) var(--ease-out-quart);
+
+  &.is-active { color: #0B0E13; }
+
+  &:hover:not(.is-active) { color: #FFB454; }
+
+  &:focus-visible {
+    outline: 2px solid #FFB454;
+    outline-offset: 4px;
+    border-radius: var(--radius-pill);
+  }
+}
+
+/* Iris bloom — animated aperture that opens over the planet on hover/focus.
+   96px wrapper: outer body fill (R+18=134 in 300 viewBox) maps to ~85px,
+   which sits just over the 78px planet body. */
+.iris-bloom {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 96px;
+  height: 96px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.iris-bloom svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Swappable facet body — CSS crossfade, independent of any JS ticker. */
+.iris-facet {
+  transition: opacity 0.22s var(--ease-out-quart), transform 0.22s var(--ease-out-quart);
+}
+
+.iris-facet.is-swapping {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .iris-switch-thumb,
+  .iris-facet { transition: none; }
+}
+
 @media (hover: none) {
   .solar-planet--iris .solar-planet-sub { opacity: 1; }
 }
